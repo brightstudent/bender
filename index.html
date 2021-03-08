@@ -19,7 +19,7 @@
             <button class="telknop">Tellen</button>
             <button name="stijl" class="loopknop" value="lopen">Lopen</button>
             <button name="stijl" class="slaapknop" value="slapen">Slapen</button>
-            <button class="colorbtn">Kleur<input type="color" id="bgpicker"></button>
+            <button class="colorbtn">Kleur<input id="bgpicker" type="color"></button>
         </div>
 
         <div id="intro">
@@ -27,17 +27,16 @@
             <p>Klik op <b>Random</b> voor een andere Bender</p>
         </div>
 
-        <div class="zoom">
+        <div id="verkleinen">
             <p id="schaal">Schaal 100%</p>
-            <input type="range" id="slider" value=".8" min="0.2" max=".8" step="0.2">
+            <input id="slider" type="range" value=".8" min="0.2" max=".8" step="0.2">
         </div>
 
-        <div class="biertje">
+        <div id="biertje">
             <img src="images/beer.png" alt="beer" draggable="true">
         </div>
 
-        <input id="pic" type="url" placeholder="plak een foto url hier">
-
+        <input id="bgfoto" type="url" placeholder="Foto URL plakken">
 
         <div class="bender">
             <div class="positie"></div>
