@@ -15,7 +15,6 @@
   --gold: gold;
   /*foto*/
   --foto: url(https://cdna.artstation.com/p/assets/images/images/027/999/174/large/mark-montague-twitch-prime-bg-artstation-002.jpg?1593184363);
-
   /*buttons*/
   --btncolor: white;
   --btncolortxt: black;
@@ -49,11 +48,15 @@ body.bling {
   background-size: cover;
 }
 
-#pic {
+body #bgfoto {
   display: none;
+}
+
+body.bling #bgfoto {
+  display: block;
   position: absolute;
   bottom: 1rem;
-  right: calc(50% - 300px / 2);
+  right: 1rem;
   color: #000000;
   background-color: white;
   border: transparent;
@@ -61,7 +64,7 @@ body.bling {
   height: 3em;
   outline: 1px;
   padding: 0 1em;
-  width: 300px;
+  /* width: 300px; */
 }
 
 body.bling #intro {
@@ -146,7 +149,7 @@ button:hover {
   color: var(--btnactiontxt);
 }
 
-.zoom {
+#verkleinen {
   display: flex;
   align-items: center;
   background: rgb(255, 255, 255);
@@ -159,7 +162,7 @@ button:hover {
   top: 1em;
 }
 
-.zoom > * {
+#verkleinen > * {
   margin: 10px;
 }
 
@@ -167,7 +170,7 @@ button:hover {
   width: 100px;
 }
 
-.biertje,
+#biertje,
 .positie {
   position: absolute;
   display: flex;
@@ -175,47 +178,7 @@ button:hover {
   align-items: center;
 }
 
-/* mond */
-
-/* .hoofd .mond {
-  background-image: linear-gradient(
-      180deg,
-      transparent 45%,
-      black 45%,
-      black 55%,
-      transparent 55%
-    ),
-    repeating-linear-gradient(90deg, black 10%, black 12%, white 12%, white 25%);
-  width: 80%;
-  height: 20px;
-  border-radius: 20px;
-  left: 10%;
-  bottom: 10%;
-  border: 2px solid;
-  display: none;
-}
-
-.bender.roest .hoofd .mond {
-  display: block;
-}
-
-.bender .hoofd .mond {
-  animation: small-mouth 0.3s infinite alternate linear both;
-}
-
-@keyframes small-mouth {
-  0% {
-    height: 20px;
-  }
-  100% {
-    height: 10px;
-    bottom: calc(10% + 5px);
-  }
-} */
-
-/* mond */
-
-.biertje {
+#biertje {
   background-color: white;
   height: 110px;
   width: 110px;
@@ -276,6 +239,8 @@ img:active {
 .gone {
   display: none;
 }
+
+/* >>> BENDER CODE <<< */
 
 .bender {
   transform: scale(var(--scale));
@@ -340,7 +305,7 @@ img:active {
 .bender .vision {
   border: var(--parts-border);
   border-radius: 50px;
-  background-color: #393939;
+  background-color: #333333;
   width: 110px;
   height: 40px;
   left: calc(50% - 110px / 2);
@@ -443,32 +408,6 @@ img:active {
   transform: rotate(5deg);
   transform-origin: 60% 10%;
   left: 0;
-}
-
-.bender.zwaai .rechter.arm {
-  animation: 3s zwaaien ease-in-out both;
-}
-
-@keyframes zwaaien {
-  0% {
-    transform: rotate(-5deg);
-  }
-
-  30% {
-    transform: rotate(-170deg);
-  }
-
-  50% {
-    transform: rotate(-130deg);
-  }
-
-  70% {
-    transform: rotate(-170deg);
-  }
-
-  100% {
-    transform: rotate(-5deg);
-  }
 }
 
 .rechter.arm {
@@ -575,17 +514,8 @@ img:active {
 
 .bender.lopen {
   --beweeg: been-beweging 0.6s infinite alternate;
-  --stappen: cubic-bezier(0.8, 0.5, 0.2, 0);
-  animation: dichtbij-komen 8s linear both;
-}
-
-@keyframes dichtbij-komen {
-  0% {
-    transform: scale(0.4);
-  }
-  100% {
-    transform: scale(0.8);
-  }
+  --stappen: cubic-bezier(0, 0.2, 0.5, 0.8);
+  animation: dichtbij-komen 4.8s linear both infinite;
 }
 
 .bender.lopen .linker.been {
@@ -597,13 +527,25 @@ img:active {
   animation: var(--beweeg) -0.6s;
   animation-timing-function: var(--stappen);
 }
+@keyframes dichtbij-komen {
+  0% {
+    transform: scale(var(--scale));
+  }
+  5% {
+    transform: scale(calc(var(--scale) / 2));
+  }
+  100% {
+    /* transform: scale(0.8); */
+    transform: scale(var(--scale));
+  }
+}
 
 @keyframes been-beweging {
   0% {
-    transform: translateY(-20%) scale(0.92);
+    transform: translateY(0%);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(-20%) scale(0.92);
   }
 }
 
@@ -670,6 +612,34 @@ img:active {
   transition: 1s;
 }
 
+/* bender zwaait */
+
+.bender.zwaai .rechter.arm {
+  animation: 3s zwaaien ease-in-out both;
+}
+
+@keyframes zwaaien {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  30% {
+    transform: rotate(-170deg);
+  }
+
+  50% {
+    transform: rotate(-130deg);
+  }
+
+  70% {
+    transform: rotate(-170deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
 @media (max-height: 705px) {
   #intro {
     transform: scale(0.7);
@@ -678,7 +648,7 @@ img:active {
     top: calc(50% - (90px / 2) + 240px);
   }
 
-  .zoom {
+  #verkleinen {
     display: none;
   }
 
@@ -689,6 +659,9 @@ img:active {
   }
   @keyframes dichtbij-komen {
     0% {
+      transform: scale(0.7);
+    }
+    5%{
       transform: scale(0.3);
     }
     100% {
@@ -705,10 +678,6 @@ img:active {
     top: calc(50% - (90px / 2) + 180px);
   }
 
-  .zoom {
-    display: none;
-  }
-
   .bender {
     transition: 0.2s;
     transition-property: transform;
@@ -716,6 +685,9 @@ img:active {
   }
   @keyframes dichtbij-komen {
     0% {
+      transform: scale(0.5);
+    }
+    5% {
       transform: scale(0.2);
     }
     100% {
@@ -725,12 +697,8 @@ img:active {
 }
 
 @media (max-height: 420px) {
-  body > * :not(.bender, .zoom) {
+  body > * :not(.bender, #verkleinen) {
     display: none;
-  }
-
-  body.bling #pic {
-    display: block;
   }
 
   .bender:after {
@@ -764,11 +732,12 @@ img:active {
 }
 
 @media (max-width: 704px) {
-  body > * :not(.bender, .zoom) {
+  body > * :not(.bender, #verkleinen) {
     display: none;
   }
-  body.bling #pic {
-    display: block;
+
+  body.bling #bgfoto {
+    display: none;
   }
 
   .bender:after {
@@ -802,13 +771,13 @@ img:active {
 }
 
 @media (max-width: 800px) {
-  .zoom {
+  #verkleinen {
     display: none;
   }
 }
 
 @media (max-width: 900px) {
-  .zoom > p {
+  #verkleinen > p {
     display: none;
   }
 }
