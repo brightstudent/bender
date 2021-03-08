@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Bender - Zaid El Boustani</title>
+    <meta charset="utf-8" />
+    <meta name="index" content="Een template voor alle tests." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="_css/style.css">
+    <link rel="fav icon" href="_img/favicon.svg">
+
+</head>
+
+
+<body>
+    <main>
+        <div id="buttons">
+            <button class="randomknop">Random</button>
+            <button class="telknop">Tellen</button>
+            <button name="stijl" class="loopknop" value="lopen">Lopen</button>
+            <button name="stijl" class="slaapknop" value="slapen">Slapen</button>
+            <button class="colorbtn">Kleur<input type="color" id="bgpicker"></button>
+        </div>
+
+        <div id="intro">
+            <h1 id="modus">Dit is Bender</h1>
+            <p>Klik op <b>Random</b> voor een andere Bender</p>
+        </div>
+
+        <div class="zoom">
+            <p id="schaal">Schaal 100%</p>
+            <input type="range" id="slider" value=".8" min="0.2" max=".8" step="0.2">
+        </div>
+
+        <div class="biertje">
+            <img src="_img/beer.png" alt="beer" draggable="true">
+        </div>
+
+        <input id="pic" type="url" placeholder="plak een foto url hier">
+
+
+        <div class="bender">
+            <div class="positie"></div>
+            <div class="hoofd">
+                <div class="mond"></div>
+                <div class="antene"></div>
+                <div class="zendertje"></div>
+                <div class="vision">
+                    <div class="rechter oog">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="linker oog">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="romp">
+                <div class="vakje">
+                    <input type="color" id="bendcolor">
+                    <div class="knoopje"> </div>
+                </div>
+            </div>
+            <div class="armen">
+                <div class="rechter joint"></div>
+                <div class="rechter arm"></div>
+                <div class="linker joint"></div>
+                <div class="linker arm"> </div>
+            </div>
+            <div class="benen">
+                <div class="rechter been">
+                    <div class="rechter voet"></div>
+                </div>
+                <div class="linker been">
+                    <div class="linker voet"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <script src="_js/script.js"></script>
+
+</body>
+
+</html>
