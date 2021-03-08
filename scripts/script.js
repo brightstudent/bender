@@ -35,9 +35,10 @@ function handleStijlButton(event) {
       bender.classList.remove(stijlButton.value);
     });
     bender.classList.add(event.target.value);
+    event.target.value == 'slapen' ? setTimeout(() =>bender.classList.remove("lopen"), 4810): bender.classList.add(event.target.value);
+    console.log(event.target.value == 'lopen');
     biertje.appendChild(foto);
     dropzone.classList.add("gone");
-    setTimeout(() => bender.classList.remove("lopen"), 8100);
   }
 }
 
@@ -124,7 +125,7 @@ function dragDrop(e) {
 
 // backdroppen van de bier
 
-var biertje = document.querySelector(".biertje");
+var biertje = document.querySelector("#biertje");
 
 biertje.addEventListener("drop", backDrop);
 biertje.addEventListener("dragover", backdragOver);
@@ -160,8 +161,6 @@ bgpicker.addEventListener("input", () => {
 
 var slider = document.querySelector("#slider");
 
-// document.getElementById("hier").innerHTML = 'Schalen ' + '0.8';
-
 slider.addEventListener("input", () => {
   var number = slider.value;
   document.getElementById("schaal").innerHTML =
@@ -169,20 +168,16 @@ slider.addEventListener("input", () => {
   document.documentElement.style.setProperty("--scale", number);
 
   if (number != 0.2) {
-    // document.documentElement.style.removeProperty('--bg-regular');
     bender.classList.remove("zwaai");
   } else {
-    // document.documentElement.style.setProperty('--bg-regular', 'red');
     bender.classList.add("zwaai");
   }
 });
 
+var bgfoto = document.querySelector("#bgfoto");
 
-var pic = document.querySelector("#pic");
-
-pic.addEventListener("input", () => {
-  var url = pic.value;
-//   hier.innerHTML = "datum is " + url;
-  console.log('aan');
-  document.documentElement.style.setProperty("--foto", "url(" + url +")");
+bgfoto.addEventListener("input", () => {
+  var url = bgfoto.value;
+  console.log("aan");
+  document.documentElement.style.setProperty("--foto", "url(" + url + ")");
 });
