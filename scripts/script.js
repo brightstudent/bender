@@ -35,7 +35,7 @@ function handleStijlButton(event) {
       bender.classList.remove(stijlButton.value);
     });
     bender.classList.add(event.target.value);
-    event.target.value == 'slapen' ? setTimeout(() =>bender.classList.remove("lopen"), 4810): bender.classList.add(event.target.value);
+    event.target.value == 'lopen' ? setTimeout(() =>bender.classList.remove("lopen"), 4810): bender.classList.add(event.target.value);
     console.log(event.target.value == 'lopen');
     biertje.appendChild(foto);
     dropzone.classList.add("gone");
