@@ -35,8 +35,6 @@ function handleStijlButton(event) {
       bender.classList.remove(stijlButton.value);
     });
     bender.classList.add(event.target.value);
-    event.target.value == 'lopen' ? setTimeout(() =>bender.classList.remove("lopen"), 4810): bender.classList.add(event.target.value);
-    console.log(event.target.value == 'lopen');
     biertje.appendChild(foto);
     dropzone.classList.add("gone");
   }
@@ -45,6 +43,29 @@ function handleStijlButton(event) {
 stijlButtons.forEach((stijlButton) => {
   stijlButton.addEventListener("click", handleStijlButton);
 });
+
+// var currentScale = document.documentElement.style.getPropertyValue("--scale");
+
+// var requestAnimationFrame =
+//   window.requestAnimationFrame ||
+//   window.mozRequestAnimationFrame ||
+//   window.webkitRequestAnimationFrame ||
+//   window.msRequestAnimationFrame;
+
+// function moveThing() {
+//   document.documentElement.style.setProperty("--scale", currentScale);
+
+//   if (currentScale <= 0.3) {
+//     currentScale = 0.8;
+//     document.documentElement.style.setProperty("--scale", currentScale);
+//     console.log(currentScale);
+//   }
+
+//   requestAnimationFrame(moveThing);
+// }
+
+// moveThing();
+// console.log(moveThing);
 
 // Bender kliken om zijn armen omhoog te tillen.
 
@@ -143,21 +164,25 @@ function backdragOver(e) {
   console.log("in place!");
 }
 
+// voor de verborgen knop op bender om zijn kleur te veranderen
+
 var colorInput = document.querySelector("#bendcolor");
 
 colorInput.addEventListener("input", () => {
   var color = colorInput.value;
   document.documentElement.style.setProperty("--regular", color);
-  // document.documentElement.style.setProperty('--roest', color);
 });
+
+// achtergrondkleur aanpassen met een knop in de regular modus
 
 var bgpicker = document.querySelector("#bgpicker");
 
 bgpicker.addEventListener("input", () => {
   var color = bgpicker.value;
   document.documentElement.style.setProperty("--bg-regular", color);
-  // document.documentElement.style.setProperty('--roest', color);
 });
+
+// slider om Bender te schalen bij 0.2 gaat hij zwaaien met class zwaai
 
 var slider = document.querySelector("#slider");
 
@@ -173,6 +198,8 @@ slider.addEventListener("input", () => {
     bender.classList.add("zwaai");
   }
 });
+
+// soor een img url te plaasten in de text box verandert de achtergrond in Bling modus
 
 var bgfoto = document.querySelector("#bgfoto");
 
