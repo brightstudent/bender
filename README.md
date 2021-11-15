@@ -50,79 +50,9 @@ stijlButtons.forEach((stijlButton) => {
 });
 ````
 
-function armenIndeLucht() {
-  bender.classList.toggle("happy");
-  console.log("Bender is raising his arms");
-}
 
-function togglePlay() {
-  isPlaying ? zingen.pause() : zingen.play();
-}
-
-zingen.onplaying = function () {
-  isPlaying = true;
-};
-zingen.onpause = function () {
-  isPlaying = false;
-};
-
-function dragStart() {
-  console.log("draging...");
-  setTimeout(() => this.classList.add("slepen"), 0);
-}
-
-function dragEnd() {
-  console.log("los");
-  foto.classList.remove("slepen");
-}
-
-function dragOver(e) {
-  e.preventDefault();
-  console.log("in place!");
-  bender.classList.add("happy");
-}
-
-function dragEnter(e) {
-  e.preventDefault();
-}
-
-function dragLeave() {
-  console.log("leave");
-  bender.classList.remove("happy");
-}
-
-function dragDrop(e) {
-  console.log("drop");
-  e.preventDefault();
-  const burp = new Audio("sounds/burping.wav");
-  setTimeout(() => burp.play(), 1000);
-  setTimeout(() => bender.classList.remove("happy"), 1000);
-
-  dropzone.appendChild(foto);
-}
-
-function backDrop(e) {
-  e.preventDefault();
-  console.log("teruggezet");
-  biertje.appendChild(foto);
-  foto.classList.remove("slepen");
-  bender.classList.remove("happy");
-}
-
-function backdragOver(e) {
-  e.preventDefault();
-  console.log("in place!");
-}
-
-randomKnop.addEventListener("click", randomize);
-stijlButtons.forEach((stijlButton) => {
-  stijlButton.addEventListener("click", handleStijlButton);
-});
-
-/* -------------------------------------------------------------------------- */
-/*                               Arrow Functions                              */
-/* -------------------------------------------------------------------------- */
-
+Ik heb bij het maken van Bender ook arrow functions ontdekt! 
+```javascript
 colorInput.addEventListener("input", () => {
   let color = colorInput.value;
   document.documentElement.style.setProperty("--regular", color);
@@ -150,3 +80,4 @@ bgfoto.addEventListener("input", () => {
   console.log("aan");
   document.documentElement.style.setProperty("--foto", "url(" + url + ")");
 });
+```
