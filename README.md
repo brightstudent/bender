@@ -16,7 +16,7 @@ function randomize() {
   bender.classList.add(bendermode[random]);
 }
 ```
-Deze functie zorgt ervoor dat niet 2 functie tegelijk worden uitgevoerd. Bender kan slapen OF lopen, maar geen beide.
+Deze functie zorgt ervoor dat niet 2 functie tegelijk worden uitgevoerd. Bender kan slapen OF lopen, maar geen beide.</br>
 Als je op de slapen klikt, dan worden alle waardes verwijderd en wordt de `value="slapen"` toegevoegd. 
 Als je op de lopen klikt, dan worden alle waardes verwijderd en wordt de `value="lopen"` toegevoegd.
 Als je nog een keer op dezelfde knop kilkt, dan wordt de huidige waarde verwijderd.
