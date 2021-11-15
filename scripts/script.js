@@ -44,29 +44,6 @@ stijlButtons.forEach((stijlButton) => {
   stijlButton.addEventListener("click", handleStijlButton);
 });
 
-// var currentScale = document.documentElement.style.getPropertyValue("--scale");
-
-// var requestAnimationFrame =
-//   window.requestAnimationFrame ||
-//   window.mozRequestAnimationFrame ||
-//   window.webkitRequestAnimationFrame ||
-//   window.msRequestAnimationFrame;
-
-// function moveThing() {
-//   document.documentElement.style.setProperty("--scale", currentScale);
-
-//   if (currentScale <= 0.3) {
-//     currentScale = 0.8;
-//     document.documentElement.style.setProperty("--scale", currentScale);
-//     console.log(currentScale);
-//   }
-
-//   requestAnimationFrame(moveThing);
-// }
-
-// moveThing();
-// console.log(moveThing);
-
 // Bender kliken om zijn armen omhoog te tillen.
 
 function armenIndeLucht() {
