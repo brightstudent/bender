@@ -1,240 +1,142 @@
-# Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
-
-
-
-
-## Jij
-
-<details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
-
-### Auteur:
-Sanne 't Hooft (vervangen door jouw naam)
-
-#### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
-
-#### Je focus:
-hier je focus (kies uit responsive óf surface plane)
- 
-</details>
-
-
-
-
-
-## Je website
-
-<details open>
-<summary>uitwerken voor kick-off werkgroep</summary>
-
-### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
-
-#### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
-
-#### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
-</details>
-
-
-
-
-
-## Breakdownschets (week 1)
-
-<details>
-<summary>uitwerken na afloop 2e werkgroep</summary>
-
-### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
-</details>
-
-
-
-
-
-## Voortgang 1 (week 2)
-
-<details>
-<summary>uitwerken voor 1e voortgang</summary>
-
-### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
-
-</details>
-
-
-
-
-
-## Voortgang 2 (week 3)
-
-<details>
-<summary>uitwerken voor 2e voortgang</summary>
-
-### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
-
-</details>
-
-
-
-
-
-## Toegankelijkheidstest (week 4)
-
-<details>
-<summary>uitwerken na test in 8e voortgang</summary>
-
-### Bevindingen
-Lijst met je bevindingen die in de test naar voren kwamen:
-
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-</details>
-
-
-
-
-
-## Voortgang 3 (week 4)
-
-<details>
-<summary>uitwerken voor 3e voortgang</summary>
-
-### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
-
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
-
-</details>
-
-
-
-
-
-## Eindgesprek (week 5)
-
-<details>
-<summary>uitwerken voor eindgesprek</summary>
-
-### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-### Screenshot(s)
-
-hier screenshot(s) van je eindresultaat
-
-</details>
-
-
-
-
-
-## Bronnenlijst
-
-<details open>
-<summary>continu bijhouden terwijl je werkt</summary>
-
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-1. bron 1
-2. bron 2
-3. ...
-
-</details>
+# Bender
+
+## Leuke dingen!
+In deze functie heb ik meerdere dingen geleerd:
+1. "Random" gedrag te genereren met behulp van de `Math.floor(Math.random() * max`. 
+2. Vervolgens heb ik geleerd om dat te combineren met een Array. Zoadat ik een willekeurige stijling kan aanroepen.
+
+```Javascript
+function randomize() {
+  let bgmode = ["regular", "bling", "old"];
+  let bendermode = ["none", "goud", "roest"];
+  let random = Math.floor(Math.random() * bgmode.length);
+  body.classList.remove(...bgmode);
+  body.classList.add(bgmode[random]);
+  bender.classList.remove(...bendermode);
+  bender.classList.add(bendermode[random]);
+}
+```
+
+```HTML
+ <button name="stijl" class="loopknop" value="lopen">Lopen</button>
+ <button name="stijl" class="slaapknop" value="slapen">Slapen</button>
+```
+```Javascript
+const stijlButtons = document.querySelectorAll('button[name="stijl"');
+
+function handleStijlButton(event) {
+  if (bender.classList.contains(event.target.value)) {
+    bender.classList.remove(event.target.value);
+  } else {
+    stijlButtons.forEach((stijlButton) => {
+      bender.classList.remove(stijlButton.value);
+    });
+    bender.classList.add(event.target.value);
+  }
+};
+
+stijlButtons.forEach((stijlButton) => {
+  stijlButton.addEventListener("click", handleStijlButton);
+});
+````
+
+function armenIndeLucht() {
+  bender.classList.toggle("happy");
+  console.log("Bender is raising his arms");
+}
+
+function togglePlay() {
+  isPlaying ? zingen.pause() : zingen.play();
+}
+
+zingen.onplaying = function () {
+  isPlaying = true;
+};
+zingen.onpause = function () {
+  isPlaying = false;
+};
+
+function dragStart() {
+  console.log("draging...");
+  setTimeout(() => this.classList.add("slepen"), 0);
+}
+
+function dragEnd() {
+  console.log("los");
+  foto.classList.remove("slepen");
+}
+
+function dragOver(e) {
+  e.preventDefault();
+  console.log("in place!");
+  bender.classList.add("happy");
+}
+
+function dragEnter(e) {
+  e.preventDefault();
+}
+
+function dragLeave() {
+  console.log("leave");
+  bender.classList.remove("happy");
+}
+
+function dragDrop(e) {
+  console.log("drop");
+  e.preventDefault();
+  const burp = new Audio("sounds/burping.wav");
+  setTimeout(() => burp.play(), 1000);
+  setTimeout(() => bender.classList.remove("happy"), 1000);
+
+  dropzone.appendChild(foto);
+}
+
+function backDrop(e) {
+  e.preventDefault();
+  console.log("teruggezet");
+  biertje.appendChild(foto);
+  foto.classList.remove("slepen");
+  bender.classList.remove("happy");
+}
+
+function backdragOver(e) {
+  e.preventDefault();
+  console.log("in place!");
+}
+
+randomKnop.addEventListener("click", randomize);
+stijlButtons.forEach((stijlButton) => {
+  stijlButton.addEventListener("click", handleStijlButton);
+});
+
+/* -------------------------------------------------------------------------- */
+/*                               Arrow Functions                              */
+/* -------------------------------------------------------------------------- */
+
+colorInput.addEventListener("input", () => {
+  let color = colorInput.value;
+  document.documentElement.style.setProperty("--regular", color);
+});
+bgpicker.addEventListener("input", () => {
+  let color = bgpicker.value;
+  document.documentElement.style.setProperty("--bg-regular", color);
+});
+
+slider.addEventListener("input", () => {
+  let number = slider.value;
+  document.getElementById("schaal").innerHTML =
+    "Schaal " + (number * 100 + 20) + "%";
+  document.documentElement.style.setProperty("--scale", number);
+
+  if (number != 0.2) {
+    bender.classList.remove("zwaai");
+  } else {
+    bender.classList.add("zwaai");
+  }
+});
+
+bgfoto.addEventListener("input", () => {
+  let url = bgfoto.value;
+  console.log("aan");
+  document.documentElement.style.setProperty("--foto", "url(" + url + ")");
+});
