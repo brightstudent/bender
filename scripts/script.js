@@ -1,13 +1,30 @@
-// Bender en zijn achtergrond aanpassen
+/* -------------------------------------------------------------------------- */
+/*                                  variables                                 */
+/* -------------------------------------------------------------------------- */
 
-var body = document.querySelector("body");
-var bender = document.querySelector(".bender");
-var randomKnop = document.querySelector(".randomknop");
+const body = document.querySelector("body");
+const bender = document.querySelector(".bender");
+const randomKnop = document.querySelector(".randomknop");
+const stijlButtons = document.querySelectorAll('button[name="stijl"');
+const telKnop = document.querySelector(".zingen");
+const zingen = new Audio("sounds/sing.mp3");
+let isPlaying = false;
+const foto = document.querySelector("img");
+const dropzone = document.querySelector(".positie");
+const biertje = document.querySelector("#biertje");
+const colorInput = document.querySelector("#bendcolor");
+const bgpicker = document.querySelector("#bgpicker");
+const slider = document.querySelector("#slider");
+const bgfoto = document.querySelector("#bgfoto");
+
+/* -------------------------------------------------------------------------- */
+/*                                  Functions                                 */
+/* -------------------------------------------------------------------------- */
 
 function randomize() {
-  var bgmode = ["regular", "bling", "old"];
-  var bendermode = ["none", "goud", "roest"];
-  var random = Math.floor(Math.random() * bgmode.length);
+  let bgmode = ["regular", "bling", "old"];
+  let bendermode = ["none", "goud", "roest"];
+  let random = Math.floor(Math.random() * bgmode.length);
 
   body.classList.remove(...bgmode);
   body.classList.add(bgmode[random]);
@@ -19,12 +36,6 @@ function randomize() {
 
   console.log("background mode", bgmode[random], "Bender", bendermode[random]);
 }
-
-randomKnop.addEventListener("click", randomize);
-
-// zodat slapen en lopen niet door elkaar gaan.
-
-var stijlButtons = document.querySelectorAll('button[name="stijl"');
 
 function handleStijlButton(event) {
   if (bender.classList.contains(event.target.value)) {
@@ -40,46 +51,21 @@ function handleStijlButton(event) {
   }
 }
 
-stijlButtons.forEach((stijlButton) => {
-  stijlButton.addEventListener("click", handleStijlButton);
-});
-
-// Bender kliken om zijn armen omhoog te tillen.
-
 function armenIndeLucht() {
   bender.classList.toggle("happy");
   console.log("Bender is raising his arms");
 }
 
-bender.addEventListener("dblclick", armenIndeLucht);
-
-// Bender gaat tellen
-
-var telKnop = document.querySelector(".telknop");
-var counting = new Audio("sounds/counting.wav");
-
-var isPlaying = false;
-
 function togglePlay() {
-  isPlaying ? counting.pause() : counting.play();
+  isPlaying ? zingen.pause() : zingen.play();
 }
 
-counting.onplaying = function () {
+zingen.onplaying = function () {
   isPlaying = true;
 };
-counting.onpause = function () {
+zingen.onpause = function () {
   isPlaying = false;
 };
-
-telKnop.addEventListener("click", togglePlay);
-
-// ------------- Bier geven aan Bender ------------- //
-
-var foto = document.querySelector("img");
-var dropzone = document.querySelector(".positie");
-
-foto.addEventListener("dragstart", dragStart);
-foto.addEventListener("dragend", dragEnd);
 
 function dragStart() {
   console.log("draging...");
@@ -90,11 +76,6 @@ function dragEnd() {
   console.log("los");
   foto.classList.remove("slepen");
 }
-
-dropzone.addEventListener("dragover", dragOver);
-dropzone.addEventListener("dragenter", dragEnter);
-dropzone.addEventListener("dragleave", dragLeave);
-dropzone.addEventListener("drop", dragDrop);
 
 function dragOver(e) {
   e.preventDefault();
@@ -114,23 +95,16 @@ function dragLeave() {
 function dragDrop(e) {
   console.log("drop");
   e.preventDefault();
-  var burp = new Audio("sounds/burping.wav");
+  const burp = new Audio("sounds/burping.wav");
   setTimeout(() => burp.play(), 1000);
   setTimeout(() => bender.classList.remove("happy"), 1000);
 
   dropzone.appendChild(foto);
 }
 
-// backdroppen van de bier
-
-var biertje = document.querySelector("#biertje");
-
-biertje.addEventListener("drop", backDrop);
-biertje.addEventListener("dragover", backdragOver);
-
 function backDrop(e) {
   e.preventDefault();
-  console.log("het werkt!");
+  console.log("teruggezet");
   biertje.appendChild(foto);
   foto.classList.remove("slepen");
   bender.classList.remove("happy");
@@ -141,30 +115,26 @@ function backdragOver(e) {
   console.log("in place!");
 }
 
-// voor de verborgen knop op bender om zijn kleur te veranderen
-
-var colorInput = document.querySelector("#bendcolor");
-
-colorInput.addEventListener("input", () => {
-  var color = colorInput.value;
-  document.documentElement.style.setProperty("--regular", color);
+randomKnop.addEventListener("click", randomize);
+stijlButtons.forEach((stijlButton) => {
+  stijlButton.addEventListener("click", handleStijlButton);
 });
 
-// achtergrondkleur aanpassen met een knop in de regular modus
+/* -------------------------------------------------------------------------- */
+/*                               Arrow Functions                              */
+/* -------------------------------------------------------------------------- */
 
-var bgpicker = document.querySelector("#bgpicker");
-
+colorInput.addEventListener("input", () => {
+  let color = colorInput.value;
+  document.documentElement.style.setProperty("--regular", color);
+});
 bgpicker.addEventListener("input", () => {
-  var color = bgpicker.value;
+  let color = bgpicker.value;
   document.documentElement.style.setProperty("--bg-regular", color);
 });
 
-// slider om Bender te schalen bij 0.2 gaat hij zwaaien met class zwaai
-
-var slider = document.querySelector("#slider");
-
 slider.addEventListener("input", () => {
-  var number = slider.value;
+  let number = slider.value;
   document.getElementById("schaal").innerHTML =
     "Schaal " + (number * 100 + 20) + "%";
   document.documentElement.style.setProperty("--scale", number);
@@ -176,12 +146,24 @@ slider.addEventListener("input", () => {
   }
 });
 
-// soor een img url te plaasten in de text box verandert de achtergrond in Bling modus
-
-var bgfoto = document.querySelector("#bgfoto");
-
 bgfoto.addEventListener("input", () => {
-  var url = bgfoto.value;
+  let url = bgfoto.value;
   console.log("aan");
   document.documentElement.style.setProperty("--foto", "url(" + url + ")");
 });
+
+/* -------------------------------------------------------------------------- */
+/*                                EventListeners                              */
+/* -------------------------------------------------------------------------- */
+
+bender.addEventListener("dblclick", armenIndeLucht);
+telKnop.addEventListener("click", togglePlay);
+foto.addEventListener("dragstart", dragStart);
+foto.addEventListener("dragend", dragEnd);
+dropzone.addEventListener("dragover", dragOver);
+dropzone.addEventListener("dragenter", dragEnter);
+dropzone.addEventListener("dragleave", dragLeave);
+dropzone.addEventListener("drop", dragDrop);
+biertje.addEventListener("drop", backDrop);
+biertje.addEventListener("dragover", backdragOver);
+
