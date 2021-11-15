@@ -54,8 +54,10 @@ stijlButtons.forEach((stijlButton) => {
 ````
 ### Arrow functions & setProperty()
 
-Ik heb bij het maken van Bender ook arrow functions ontdekt! Deze heb ik voor de inputs gebruikt, om bepaalde waardes op te halen en veranderen.<.br>
+Ik heb bij het maken van Bender ook arrow functions ontdekt! Deze heb ik voor de inputs gebruikt, om bepaalde waardes op te halen en veranderen.
+
 #### Voorbeeld 1:
+
 In de eerste functie heb ik een `input` met de type `color`. Deze gebruik ik om een willekeurige kleur te kiezen. De gekozen kleur wordt in de variable `color` gedrukt, vervolgens wordt de `setProperty()` om een waarde in de root aan te passen.
 ```HTML
   <button class="colorbtn">Kleur<input id="bgpicker" type="color"></button>
