@@ -115,11 +115,6 @@ function backdragOver(e) {
   console.log("in place!");
 }
 
-randomKnop.addEventListener("click", randomize);
-stijlButtons.forEach((stijlButton) => {
-  stijlButton.addEventListener("click", handleStijlButton);
-});
-
 /* -------------------------------------------------------------------------- */
 /*                               Arrow Functions                              */
 /* -------------------------------------------------------------------------- */
@@ -152,10 +147,15 @@ bgfoto.addEventListener("input", () => {
   document.documentElement.style.setProperty("--foto", "url(" + url + ")");
 });
 
+stijlButtons.forEach((stijlButton) => {
+  stijlButton.addEventListener("click", handleStijlButton);
+});
+
 /* -------------------------------------------------------------------------- */
 /*                                EventListeners                              */
 /* -------------------------------------------------------------------------- */
 
+randomKnop.addEventListener("click", randomize);
 bender.addEventListener("dblclick", armenIndeLucht);
 telKnop.addEventListener("click", togglePlay);
 foto.addEventListener("dragstart", dragStart);
