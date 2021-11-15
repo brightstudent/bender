@@ -27,8 +27,8 @@ Deze functie zorgt ervoor dat niet 2 functie tegelijk worden uitgevoerd. Bender 
 De knoppen worden met de methode `querySelectorAll()` opgehaald. Er wordt speciefiek gevraagd naar een `button` met de attribute `name="stijl"`. De buttons hebben ook een attribute `value`. Deze value is de `class` die toegevoegd wordt aan Bender wanneer een van knoppen is geklikt.  
 
 ```HTML
- <button name="stijl" class="loopknop" value="lopen">Lopen</button>
- <button name="stijl" class="slaapknop" value="slapen">Slapen</button>
+<button name="stijl" class="loopknop" value="lopen">Lopen</button>
+<button name="stijl" class="slaapknop" value="slapen">Slapen</button>
 ```
 ```Javascript
 const stijlButtons = document.querySelectorAll('button[name="stijl"');
@@ -60,7 +60,7 @@ Ik heb bij het maken van Bender ook arrow functions ontdekt! Deze heb ik voor de
 
 In de eerste functie heb ik een `input` met de type `color`. Deze gebruik ik om een willekeurige kleur te kiezen. De gekozen kleur wordt in de variable `color` gedrukt, vervolgens wordt de `setProperty()` om een waarde in de root aan te passen.
 ```HTML
-  <button class="colorbtn">Kleur<input id="bgpicker" type="color"></button>
+<button class="colorbtn">Kleur<input id="bgpicker" type="color"></button>
 ```
 ```javascript
 bgpicker.addEventListener("input", () => {
