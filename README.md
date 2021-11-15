@@ -21,6 +21,8 @@ Deze functie zorgt ervoor dat niet 2 functie tegelijk worden uitgevoerd. Bender 
 * Als je op de lopen klikt, dan worden alle waardes verwijderd en wordt de `value="lopen"` toegevoegd.
 * Als je nog een keer op dezelfde knop kilkt, dan wordt de huidige waarde verwijderd.
 
+De knoppen worden met de methode `querySelectorAll()` opgehaald. Er wordt speciefiek gevraagd naar een `button` met de atribute `name="stijl"`. Elke `button` heeft vervolgens een atribute `value` dat overeenkomt met de `class`.  
+
 ```HTML
  <button name="stijl" class="loopknop" value="lopen">Lopen</button>
  <button name="stijl" class="slaapknop" value="slapen">Slapen</button>
