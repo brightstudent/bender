@@ -2,19 +2,17 @@
 
 ## Leuke dingen!
 ### Array's & Math.random() 
-In deze functie heb ik meerdere dingen geleerd:
-1. "Random" gedrag te genereren met behulp van de `Math.floor(Math.random() * max`. 
-2. Vervolgens heb ik geleerd om dat te combineren met een Array. Zoadat ik een willekeurige stijling kan aanroepen.
+In deze functie heb ik twee dingen geleerd:
+1. "Random" gedrag genereren door `Math.floor(Math.random() * max)` te gebruiken. 
+2. Random gebruiken in combinatie met arrays om een willekeurige stijling te kiezen uit een lijst.
 
 ```Javascript
 function randomize() {
   let bgmode = ["regular", "bling", "old"];
-  let bendermode = ["none", "goud", "roest"];
   let random = Math.floor(Math.random() * bgmode.length);
+  
   body.classList.remove(...bgmode);
   body.classList.add(bgmode[random]);
-  bender.classList.remove(...bendermode);
-  bender.classList.add(bendermode[random]);
 }
 ```
 ### Attributes & querySelectorAll()  
