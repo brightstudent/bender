@@ -16,6 +16,10 @@ function randomize() {
   bender.classList.add(bendermode[random]);
 }
 ```
+Deze functie zorgt ervoor dat niet 2 functie tegelijk worden uitgevoerd. Bender kan slapen OF lopen, maar geen beide.
+Als je op de slapen klikt, dan worden alle waardes verwijderd en wordt de `value="slapen"` toegevoegd. 
+Als je op de lopen klikt, dan worden alle waardes verwijderd en wordt de `value="lopen"` toegevoegd.
+Als je nog een keer op dezelfde knop kilkt, dan wordt de huidige waarde verwijderd.
 
 ```HTML
  <button name="stijl" class="loopknop" value="lopen">Lopen</button>
@@ -25,8 +29,11 @@ function randomize() {
 const stijlButtons = document.querySelectorAll('button[name="stijl"');
 
 function handleStijlButton(event) {
+//Als je nog een keer op dezelfde knop kilkt, dan wordt de huidige waarde verwijderd.
   if (bender.classList.contains(event.target.value)) {
     bender.classList.remove(event.target.value);
+    // Als je op de slapen klikt, dan worden alle waardes verwijderd en wordt de `value="slapen"` toegevoegd. 
+    // Als je op de lopen klikt, dan worden alle waardes verwijderd en wordt de `value="lopen"` toegevoegd.
   } else {
     stijlButtons.forEach((stijlButton) => {
       bender.classList.remove(stijlButton.value);
